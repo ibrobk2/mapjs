@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Class</title>
+</head>
+<body>
+
+    <p id="txt"></p>
+    <script>
+        // nums = [2,3,4,5,7];
+        // for (let i=0; i<nums.length; i++){
+        //     console.log(nums[i]*3);
+        // }
+
+        // var nums2 = nums.map(tripple);
+
+        // function tripple(x){
+        //     return x*3;
+        // }
+
+
+        // console.log(nums2);
+
+
+        const names = [
+            {firstname:"Muhammad", lastname:"Yusuf"},
+            {firstname:"Lawal", lastname:"Musa"},
+            {firstname:"Musa", lastname:"Isah"},
+            {firstname:"Muhammad", lastname:"Usman"},
+            {firstname:"Jamil", lastname:"Galadanchi"}
+        ];
+
+        var fname = names.map(getFullname);
+
+        function getFullname (item) {
+            return [item.lastname, item.firstname].join(", ");
+        }
+
+        // console.log(fname);
+
+        for(i=0; i<fname.length; i++){
+            document.write(fname[i]+"<br>");
+        }
+    </script>
+</body>
+</html>
